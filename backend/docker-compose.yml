@@ -1,0 +1,25 @@
+services:
+  postgresql:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: psswd
+      POSTGRES_DB: gobarber
+    ports:
+      - 5432:5432
+
+  redis:
+    image: redis
+    environment:
+      REDIS_USER: redis
+      REDIS_PASSWORD: psswd
+    ports:
+      - 6379:6379
+
+  mongo:
+    image: mongo
+    environment:
+      MONGO_USER: mongo
+      MONGO_PASSWORD: psswd
+    ports:
+      - 27017:27017
